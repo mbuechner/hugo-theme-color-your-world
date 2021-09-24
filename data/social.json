@@ -27,6 +27,16 @@
     }
   },
   {
+    "entry": "xing",
+    "label": "Xing",
+    "base": "https://www.xing.com/",
+    "decentralized": true,
+    "icon": {
+      "id": "xing",
+      "source": "Fork-Awesome"
+    }
+  },
+  {
     "entry": "funkwhale",
     "label": "Funkwhale",
     "decentralized": true,

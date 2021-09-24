@@ -1,16 +1,16 @@
 # Header & Footer
 
 [ariaMainMenu]
-other = "Hauptmenü"
+other = "Hauptmenü."
 
 [changeAccent]
-other = "Aktzentfarbe wechseln."
+other = "Farbe."
 
 [changeMode]
-other = "Zu hellem/dunklen Layout wechseln."
+other = "Hell-/Dunkelmodus."
 
 [noscript]
-other = "JavaScript kann nicht aufgeführt werden. Einige Funktionen sind wurden deaktiviert."
+other = "JavaScript ist deaktiviert. Einige Funktionen wurden deaktiviert."
 
 
 # Pages

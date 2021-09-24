@@ -1,0 +1,166 @@
+# Header & Footer
+
+[ariaMainMenu]
+other = "Hauptmenü."
+
+[changeAccent]
+other = "Farbe."
+
+[changeMode]
+other = "Hell-/Dunkelmodus."
+
+[noscript]
+other = "JavaScript ist deaktiviert. Einige Funktionen wurden deaktiviert."
+
+
+# Pages
+
+[anchorFor]
+other = "Anchor for"
+
+[tableOfContents]
+other = "Contents"
+
+[publishedOn]
+other = "Published on"
+
+[lastUpdatedOn]
+other = "Last updated on"
+
+
+# Footnotes
+
+[references]
+other = "References"
+
+[seeFootnotes]
+other = "See footnotes."
+
+[return]
+other = "Return"
+
+[returnToText]
+other = "Return to text."
+
+
+# Contact form
+
+[name]
+other = "Name"
+
+[subject]
+other = "Betreff"
+
+[message]
+other = "Nachricht"
+
+[submit]
+other = "Absenden"
+
+
+# List (layout)
+
+[tag]
+other = "Tag"
+
+[tags]
+other = "Tags"
+
+[category]
+other = "Katagorie"
+
+[categories]
+other = "Kategorien"
+
+[ariaPagination]
+other = "Pagination navigation."
+
+[ariaGoToPage]
+other = "Go to page {{ .PageNumber }}."
+
+[ariaGoToFirst]
+other = "Go to first page."
+
+[ariaGoToNext]
+other = "Go to next page."
+
+[ariaGoToPrev]
+other = "Go to previous page."
+
+[ariaGoToLast]
+other = "Go to last page."
+
+
+# List (meta tags)
+
+[page]
+other = "Seite"
+
+[of]
+other = "vonf"
+
+[posts]
+other = "Posts"
+
+[postsUnderTag]
+other = "Posts under the \"{{ .Title }}\" tag."
+
+[postsUnderCategory]
+other = "Posts under the \"{{ .Title }}\" category."
+
+[pageContaining]
+other = "Page containing"
+
+
+# Search form
+
+[searchLabel]
+other = "Search"
+
+[searchAriaButton]
+other = "Run search."
+
+[searchInput]
+other = "Search field. Accepts from {{ .minLength }} to {{ .maxLength }} characters."
+
+
+# Search results page
+
+[searchNoPageFound]
+other = "No pages found."
+
+[searchResultsFor]
+other = "Results for"
+
+[searchOnePageFound]
+other = "One page found"
+
+[searchPagesFound]
+other = "pages found"
+
+[searchAwaitingSearch]
+other = "Awaiting search."
+
+[searchTooMany]
+other = "Too many pages found. Please try to repeat the search using another term."
+
+
+# Translations
+
+[alsoAvailable]
+other = "Also available in"
+
+[and]
+other = " und "
+
+
+# Misc
+
+[missingCodec]
+other = "Der Browser unterstützt leider HTML5 audio/video nicht."
+
+[boxContainingCode]
+other = "Box containing code sample."
+
+[boxContainingExpression]
+other = "Box containing expression."

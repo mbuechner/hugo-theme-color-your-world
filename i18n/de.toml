@@ -22,10 +22,10 @@ other = "Anchor for"
 other = "Contents"
 
 [publishedOn]
-other = "Published on"
+other = "Veröffentlich am"
 
 [lastUpdatedOn]
-other = "Last updated on"
+other = "Letztes Update am"
 
 
 # Footnotes

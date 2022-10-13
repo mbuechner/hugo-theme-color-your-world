@@ -7,7 +7,7 @@
         <h1>{{ .Title | emojify }}</h1>
 
         {{ if or .Params.categories .Params.tags }}
-          <section class="terms">
+          <div class="terms">
             <ul>
               {{- range sort (.GetTerms "categories") ".LinkTitle" "asc" -}}
                 <li class="category"><a class="btn" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
@@ -16,7 +16,7 @@
                 <li><a class="btn" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
               {{- end -}}
             </ul>
-          </section>
+          </div>
         {{- end -}}
         
         {{ if not .Date.IsZero }}
@@ -41,8 +41,4 @@
     </article>
   </main>
 
-{{ end }}
-
-{{ define "svg-extra" }}
-  {{ partialCached "content-svg" . }}
 {{ end }}

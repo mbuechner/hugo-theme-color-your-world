@@ -34,8 +34,40 @@
 {{ $videoPath := .Page.Params.videoPath | default "video" }}
 {{ $filePath  := path.Join $videoPath $fileName }}
 
-<video class="gifoid {{ $class }}" autoplay loop muted playsinline {{ with $title }}title="{{ . }}"{{ end }}>
-  <source src="{{ $filePath }}.mp4" type="video/mp4">
-  <source src="{{ $filePath }}.webm" type="video/webm">
+{{ $pageDir := $.Page.File.Dir }}
+
+<!-- Make sure video thumbnails are ignored -->
+{{ $videoFormats := slice "mp4" "webm" }}
+
+
+{{ $filesData := slice }}
+
+
+{{ range $videoFormats }}
+
+  {{ $resourcePath := ($.Page.Resources.GetMatch (printf "%s.%s" $filePath .)) }}
+
+  {{ $contentPath := path.Join $pageDir $resourcePath }}
+
+  {{ $file := os.Stat $contentPath }}
+  
+  {{ $filesData = $filesData | append (dict "mediaType" $resourcePath.MediaType "size" $file.Size "source" $resourcePath.RelPermalink) }}
+  
+{{ end }}
+
+
+<video
+    class="gifoid {{ $class }}"
+    autoplay
+    loop
+    muted
+    playsinline
+    {{ with $title }}title="{{ . }}"{{ end }}
+  >
+
+  {{ range sort $filesData "size" }}
+    <source src="{{ .source }}" type="{{ .mediaType }}">
+  {{ end }}
+  
   <p class="error">{{ T "missingCodec" }}</p>
 </video>

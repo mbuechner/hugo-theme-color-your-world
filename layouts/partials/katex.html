@@ -1,17 +1,17 @@
 <!-- KaTeX -->
 {{ $katexVersion := hugo.Data.default.libs.katex }}
 
-{{ $katexCSS := resources.Get (printf "libs/katex@%s/dist/katex.css" $katexVersion) | minify | fingerprint }}
+{{ $katexCSS := resources.Get (printf "libs/katex@%s/dist/katex.css" $katexVersion) | fingerprint }}
 <link rel="stylesheet" href="{{ $katexCSS.Permalink }}" integrity="{{ $katexCSS.Data.Integrity }}" crossorigin="anonymous">
 
-{{ $katexJS := resources.Get (printf "libs/katex@%s/dist/katex.js" $katexVersion) | minify | fingerprint }}
+{{ $katexJS := resources.Get (printf "libs/katex@%s/dist/katex.js" $katexVersion) | fingerprint }}
 <script defer src="{{ $katexJS.Permalink }}" integrity="{{ $katexJS.Data.Integrity }}" crossorigin="anonymous"></script>
 
 
 <!-- mhchem extension -->
 {{ if or (in .Params.katexExtensions "mhchem") (in .Site.Params.katexExtensions "mhchem") }}
 
-  {{ $mhchem := resources.Get (printf "libs/katex@%s/dist/contrib/mhchem.js" $katexVersion) | minify | fingerprint }}
+  {{ $mhchem := resources.Get (printf "libs/katex@%s/dist/contrib/mhchem.js" $katexVersion) | fingerprint }}
   <script defer src="{{ $mhchem.Permalink }}" integrity="{{ $mhchem.Data.Integrity }}" crossorigin="anonymous"></script>
 
 {{ end }}
@@ -20,7 +20,7 @@
 <!-- copy-tex extension -->
 {{ if or (in .Params.katexExtensions "copy-tex") (in .Site.Params.katexExtensions "copy-tex") }}
 
-  {{ $copyTexJS := resources.Get (printf "libs/katex@%s/dist/contrib/copy-tex.js" $katexVersion) | minify | fingerprint }}
+  {{ $copyTexJS := resources.Get (printf "libs/katex@%s/dist/contrib/copy-tex.js" $katexVersion) | fingerprint }}
   <script defer src="{{ $copyTexJS.Permalink }}" integrity="{{ $copyTexJS.Data.Integrity }}" crossorigin="anonymous"></script>
   
 {{ end }}

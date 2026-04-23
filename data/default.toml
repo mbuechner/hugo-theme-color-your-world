@@ -16,7 +16,7 @@
   paragraph     = "Nothing to see here, buddy."
 
 [libs]
-  katex = "0.16.11"
+  katex = "0.16.45"
 
 
 [imageProcessing]
